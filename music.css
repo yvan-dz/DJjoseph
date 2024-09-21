@@ -504,6 +504,8 @@ header {
 
 /* Responsive adjustments for very small devices (mobile phones) */
 @media (max-width: 576px) {
+   
+
     .intro-section {
         height: 70vh; /* Adjust further for very small screens */
     }

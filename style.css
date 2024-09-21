@@ -15,8 +15,7 @@ body {
 .logo {
     width: 140px;
     transition: transform 0.3s ease, opacity 0.3s ease; /* Effet de transition fluide */
-    margin-bottom: 1%;
-    margin-top: 1%;
+  
 }
 
 .logo:hover {
@@ -764,50 +763,139 @@ body {
 
 
 /* Section Événements */
+/* Styling for the event section with dark gradient background */
 .event-section {
-    padding: 4rem 0;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #1c1c1c, #333); /* Dark gradient background */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 5rem 0;
+    color: #fff; /* White text to contrast with dark background */
+}
+
+.event-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.event-section .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above the background and overlay */
+}
+
+.event-section .section-title {
+    color: #ffb800;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Slight shadow to make the title pop */
 }
 
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    text-align: center;
 }
 
 .event-item {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent background for cards */
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.3s ease;
 }
 
 .event-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Lift effect on hover */
 }
 
 .event-item h3 {
     font-size: 1.8rem;
+    color: #ffcc00;
     margin-bottom: 1rem;
-    color: #ffb800;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .event-item p {
-    color: #333;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
-.event-item a {
-    margin-top: 1rem;
+.event-item a.btn-gold {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Slight shadow to give button prominence */
 }
 
+.event-item a.btn-gold:hover {
+    background-color: #ffd700;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .event-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack the events vertically on smaller screens */
+    }
+
+    .event-item {
+        padding: 1.5rem; /* Slightly reduce padding */
+    }
+
+    .event-item h3 {
+        font-size: 1.6rem; /* Slightly reduce title size */
+    }
+
+    .event-item p {
+        font-size: 1rem; /* Reduce paragraph text size */
+    }
+
+    .event-item a.btn-gold {
+        font-size: 1.1rem; /* Slightly smaller button font size */
+        padding: 0.7rem 2rem; /* Adjust padding for smaller buttons */
+    }
+
+    .event-section .section-title {
+        font-size: 2.4rem; /* Slightly smaller section title on mobile */
+        margin-bottom: 2rem;
+    }
+}
+
+/* Extra adjustments for very small screens (mobile) */
+@media (max-width: 576px) {
+    .event-item {
+        padding: 1rem; /* Further reduce padding for very small screens */
+    }
+
+    .event-item h3 {
+        font-size: 1.5rem; /* Further reduce title size */
+    }
+
+    .event-item p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .event-item a.btn-gold {
+        font-size: 0.7rem; /* Smaller button font */
+        padding: 0.6rem 1.8rem; /* Adjust padding for smaller buttons */
+    }
+
+    .event-section .section-title {
+        font-size: 2rem; /* Further reduce section title */
     }
 }
 

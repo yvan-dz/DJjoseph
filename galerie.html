@@ -9,6 +9,9 @@
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link href="galerie.css" rel="stylesheet">
+    <style>.logo {
+        width: 100px;
+    }</style>
 </head>
 <body>
 
@@ -21,7 +24,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">DJ Joseph</a>
+            <a class="navbar-brand" href="index.html">DJ Joseph</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,16 +38,18 @@
                         <a class="nav-link" href="music.html">Musique</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="galerie.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Galerie
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="galerie.html">Photos</a></li>
-                            <li><a class="dropdown-item" href="#">Vidéos</a></li>
+                            <li><a class="dropdown-item" href="galerie.html#photos"><i class="fas fa-camera"></i> Photos</a></li>
+                            <li><a class="dropdown-item" href="galerie.html#videos"><i class="fas fa-video"></i> Vidéos</a></li>
+                            
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Temoignages</a></li>
+                            <li><a class="dropdown-item" href="galerie.html#temoignages"><i class="fas fa-comments"></i> Témoignages</a></li>
                         </ul>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">A propos de moi</a>
                     </li>
@@ -86,49 +91,57 @@
     </div>
 
     <!-- Contenu Photos et Vidéos -->
-    <div class="tab-content container">
+    <div class="tab-content container" id="photos">
         <!-- Section Photos -->
         <div class="tab-pane fade show active" id="photos">
             <div class="row g-3">
                 <div class="col-md-4">
-                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery" data-title="DJ Joseph Live 1">
-                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="DJ Joseph Live 1">
+                    <a href="img/dj6.jpg" data-lightbox="gallery" data-title="DJ Joseph Live 1">
+                        <img src="img/dj6.jpg" class="img-fluid" alt="DJ Joseph Live 1">
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery" data-title="DJ Joseph Live 2">
-                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="DJ Joseph Live 2">
+                    <a href="img/dj7.jpg" data-lightbox="gallery" data-title="DJ Joseph Live 2">
+                        <img src="img/dj7.jpg" class="img-fluid" alt="DJ Joseph Live 2">
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="https://via.placeholder.com/800x600" data-lightbox="gallery" data-title="DJ Joseph Live 3">
-                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="DJ Joseph Live 3">
+                    <a href="img/dj8.jpg" data-lightbox="gallery" data-title="DJ Joseph Live 3">
+                        <img src="img/dj8.jpg" class="img-fluid" alt="DJ Joseph Live 3">
                     </a>
                 </div>
             </div>
         </div>
-
-        <!-- Section Vidéos -->
-        <div class="tab-pane fade" id="videos">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <a href="https://www.youtube.com/embed/example1" data-toggle="lightbox" data-title="Performance 1" class="video-item">
-                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Performance 1">
-                    </a>
+<!-- Section Vidéos -->
+<div class="tab-pane fade" id="videos">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <a href="videos/vid4.mp4" data-toggle="lightbox" data-title="Performance 1" class="video-item">
+                <div class="video-thumbnail">
+                    <img src="img/dj9.png" class="img-fluid" alt="Performance 1">
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                    <div class="video-controls"></div> <!-- Fake video controls -->
                 </div>
-                <div class="col-md-6">
-                    <a href="https://www.youtube.com/embed/example2" data-toggle="lightbox" data-title="Performance 2" class="video-item">
-                        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Performance 2">
-                    </a>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="videos/vid5.mp4" data-toggle="lightbox" data-title="Performance 2" class="video-item">
+                <div class="video-thumbnail">
+                    <img src="img/dj10.png" class="img-fluid" alt="Performance 2">
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                    <div class="video-controls"></div> <!-- Fake video controls -->
                 </div>
-            </div>
+            </a>
         </div>
     </div>
+</div>
 
 
 
 
-    <section class="testimonials-section py-5">
+
+
+    <section class="testimonials-section py-5" id="temoignages">
         <div class="container text-center">
             <h2 class="section-title">Témoignages</h2>
             <p class="section-subtitle">Ce que mes clients disent de moi</p>
