@@ -1,0 +1,198 @@
+/* Section Galerie Styling */
+.gallery-intro {
+    background: url('https://st.depositphotos.com/1053646/1770/i/950/depositphotos_17700789-stock-photo-dance-club.jpg') no-repeat center center/cover; /* Remplace par ton image de fond */
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 6rem 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 5%;
+}
+
+.gallery-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Couche sombre */
+    z-index: -1;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInDown 1s ease both;
+}
+
+.logo {
+    width: 140px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Effet de transition fluide */
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9; /* Réduction légère de l'opacité au hover pour un effet de lumière douce */
+}
+
+/* Navbar Styling - Sombre et élégant */
+.navbar {
+    background-color: #333;
+    border-bottom: 2px solid #ffb800;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    color: #ffb800;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ffcc00;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 10px;
+}
+
+/* Divider style */
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Images et vidéos */
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial Styling */
+.testimonials-section {
+    background-color: #f9f9f9;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 50px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #ffb800;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: #ffcc00;
+    transform: scale(1.2);
+}
+
+/* Lightbox Overlay for Videos */
+.video-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-item::before {
+    content: '\f144'; /* Icone Play FontAwesome */
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.video-item:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1.4rem;
+    }
+
+    .testimonial-item {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
+
+#photos,#videos{
+    margin-bottom: 5%;
+}

@@ -1,0 +1,728 @@
+/* Global Styling */
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Poppins', sans-serif; /* Police moderne et élégante */
+    line-height: 1.6; /* Ajout d'une meilleure lisibilité */
+    overflow-x: hidden; /* Pour éviter tout débordement horizontal */
+}
+
+/* Background and Branding */
+.bg-black {
+    background-color: #000;
+}
+
+.logo {
+    width: 140px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Effet de transition fluide */
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9; /* Réduction légère de l'opacité au hover pour un effet de lumière douce */
+}
+
+
+
+/* Navbar Styling - Sombre et élégant */
+.navbar {
+    background-color: #333;
+    border-bottom: 2px solid #ffb800;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    color: #ffb800;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ffcc00;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 10px;
+}
+
+/* Divider style */
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button Styles */
+.btn-gold {
+    background-color: #ffb800;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gold:hover {
+    background-color: #ffb800;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    color: #fff;
+}
+
+/* Hero Section Styling */
+.carousel-caption h1, .carousel-caption p {
+    color: #ffb800;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* S'assure que l'image couvre tout en gardant les proportions */
+}
+
+/* Améliorer la visibilité du texte */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent pour plus de lisibilité */
+    padding: 1.5rem;
+    border-radius: 10px; /* Bordures arrondies */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ajoute une ombre au texte pour une meilleure visibilité */
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    color: #ffd700; /* Couleur dorée pour se démarquer */
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.carousel-caption .btn {
+    margin-top: 1rem;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+
+/* Section Styling */
+.videos-section, .news-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+    padding: 2.5rem 2rem;
+    margin: 3rem 0;
+    border-radius: 12px;
+    border-left: 5px solid #ffb800;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.videos-section.visible, .news-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.videos-section h2, .news-section h2 {
+    margin-bottom: 40px;
+    color: #ffb800;
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+
+.videos-section h2::after, .news-section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #ffb800;
+    position: absolute;
+    left: 47%;
+    bottom: -10px;
+}
+
+/* Hover Effects for Sections */
+.videos-section:hover, .news-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #000;
+    padding: 3rem 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile pour le footer */
+    border-top: 2px solid #ffb800; /* Bordure dorée en haut */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .social-icons {
+    margin-bottom: 1.5rem;
+}
+
+.footer .social-icons a {
+    color: #ffb800; /* Couleur dorée pour les icônes */
+    margin: 0 15px;
+    font-size: 1.5rem; /* Taille des icônes légèrement plus grande */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.3); /* Zoom plus visible au hover */
+    color: #fff; /* Icônes deviennent blanches au survol */
+}
+
+.footer p {
+    font-size: 1rem;
+    color: #ffb800; /* Couleur dorée pour la mention Websnape */
+}
+
+.footer p a {
+    color: #ffb800;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer p a:hover {
+    color: #fff; /* Blanc au survol */
+    text-decoration: underline; /* Lien souligné au survol */
+}
+
+.footer .text-light {
+    font-size: 1.1rem; /* Légèrement plus grand pour une meilleure lisibilité */
+}
+
+.footer .text-muted {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.8; /* Légère transparence pour le texte mention */
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0 1.5rem;
+    }
+    .footer .social-icons a {
+        font-size: 1.3rem;
+        margin: 0 10px;
+    }
+}
+
+
+
+
+/* Section Services */
+.services-section {
+    position: relative;
+    padding: 4rem 0;
+    background: url('https://t4.ftcdn.net/jpg/05/67/19/73/360_F_567197308_qsR4UBFxrLkb4Zf41RKQW5IIMRDo0tro.jpg') no-repeat center center/cover; /* Remplace l'URL ici */
+    background-attachment: fixed; /* Effet de parallaxe */
+    background-size: cover;
+    margin-top: 5%;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Couche sombre pour le contraste */
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-section h2{
+    color: #ffb800;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Ombre plus forte au hover */
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.service p {
+    color: #131010;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .service h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Section Process */
+.process-section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.process-step {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.process-step h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.process-step p {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .process-step h3 {
+        font-size: 1.3rem;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Section Contact */
+.contact-section {
+    padding: 4rem 0;
+    background-color: #fcf6e9; /* Orange super clair */
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1); /* Ajout d'un effet d'ombre interne */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00; /* Ligne décorative sous le titre */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center; /* Aligne les éléments au centre */
+}
+
+.contact-info {
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+    position: relative;
+}
+
+.contact-info p {
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.contact-info i {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-info p a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+    color: #ffb800;
+}
+
+.contact-form {
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background-color: #ffcc00; /* Ligne décorative au-dessus du formulaire */
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3); /* Effet lumineux au focus */
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-group input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+.form-group label a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre pour donner de la profondeur */
+}
+
+.form-group button:hover {
+    background-color: #ffb800;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+.form-group button:active {
+    transform: scale(0.98); /* Réduction légère au clic pour un effet interactif */
+}
+
+/* Back to Top Button */
+.btn-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-top:hover {
+    background-color: #ffb800;
+    transform: scale(1.1); /* Légère agrandissement au hover */
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+
+/* Section with Video Background */
+.video-background-section {
+    position: relative;
+    height: 100vh; /* Hauteur de la section égale à la hauteur de l'écran */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffb800;
+    text-align: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* La vidéo ne sera pas interactive */
+    object-fit: cover; /* Assure que la vidéo couvre toute la section */
+    z-index: -1; /* Place la vidéo derrière le contenu */
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour rendre le texte lisible */
+    border-radius: 10px;
+}
+
+.content-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content-overlay p {
+    font-size: 1.2rem;
+}
+
+/* Section Événements */
+.event-section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.event-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffb800;
+}
+
+.event-item p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-item a {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+}

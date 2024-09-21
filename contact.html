@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DJ Joseph</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="contact.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-black py-3">
+        <div class="container text-center">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/011/778/457/small_2x/music-logo-icon-free-vector.jpg" alt="DJ Joseph Logo" class="logo">
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DJ Joseph</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Musique</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="galerie.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Galerie
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Photos</a></li>
+                            <li><a class="dropdown-item" href="#">Vidéos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Temoignages</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">A propos de moi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-block">
+                    <a href="#"><i class="fab fa-facebook-f text-light me-3"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-light me-3"></i></a>
+                    <a href="#"><i class="fab fa-youtube text-light"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <section class="pricing-section py-5">
+        <div class="container text-center">
+            <h3 class="section-title">Prix de Service</h3>
+            <p class="section-subtitle">Les tarifs dépendent de plusieurs facteurs, incluant la durée de l'événement, l'équipement nécessaire et le lieu.</p>
+            <p class="pricing-description">Nous croyons en une approche personnalisée pour chaque événement. Une discussion préalable avec vous nous permettra de définir un prix unique adapté à vos besoins.</p>
+            <a href="#contact" class="btn btn-gold mt-4">Demander un devis</a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Contactez-moi</h2>
+            <p class="section-subtitle text-center">Vous avez une question, une demande de prestation ou simplement envie de discuter ? Remplissez ce formulaire ou contactez-moi directement via les réseaux sociaux ou téléphone.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Votre adresse e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Votre numéro de téléphone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre message *</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Décrivez votre demande..." required></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-gold">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="map-section py-5">
+        <div class="container">
+            <h3 class="text-center section-title">Nous localiser</h3>
+            <div class="map-container mt-4">
+                <!-- Google Map iframe (OpenStreetMap alternative possible) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.5322833277975!2d4.89797591559495!3d52.37795617978669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6097f3efb59b3%3A0xc2b3c45b3bd2eeb8!2sAmsterdam%20Central%20Station!5e0!3m2!1sen!2sfr!4v1636105051123!5m2!1sen!2sfr" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-center py-5">
+        <div class="container">
+            <div class="footer-content">
+                <span class="text-light d-block mb-3">&copy; 2024 DJ Joseph</span>
+                <div class="social-icons mb-3">
+                    <a href="#"><i class="fab fa-facebook-f text-light me-3"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-light me-3"></i></a>
+                    <a href="#"><i class="fab fa-youtube text-light"></i></a>
+                </div>
+                <p class="text-muted">
+                    <a href="https://www.websnape.de" class="text-decoration-none" target="_blank" style="color: #ffb800;">
+                        Conçu par Websnape
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

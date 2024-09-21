@@ -1,0 +1,85 @@
+/* Section Playlist */
+.playlist-section {
+    position: relative;
+    padding: 4rem 0;
+    background: url('https://images.squarespace-cdn.com/content/v1/5f6c2023d9baf06b88c6c0d4/1623890997705-P13930Y1SCG5MPMTOW0Q/unsplash-image-ZODcBkEohk8.jpg') no-repeat center center/cover; /* Remplace l'URL ici */
+    background-attachment: fixed; /* Fond fixe pour l'effet de parallaxe */
+    background-size: cover; /* Assurer que l'image couvre toute la section */
+}
+
+.playlist-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Couche sombre pour améliorer la lisibilité */
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Assure que le contenu est au-dessus de l'image */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    color: #ff5733;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.track {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #ff5733; /* Bordure orange à gauche */
+}
+
+.track:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au hover */
+}
+
+.track h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+audio {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .playlist-section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .track h3 {
+        font-size: 1.4rem;
+    }
+}

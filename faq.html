@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - DJ Joseph</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="faq.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header: Bande noire avec logo centré -->
+    <header class="bg-black py-3">
+        <div class="container text-center">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/011/778/457/small_2x/music-logo-icon-free-vector.jpg"
+                alt="DJ Joseph Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Navigation avec menu responsive -->
+    <!-- Menu avec Bootstrap et style sombre -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">DJ Joseph</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Musique</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="galerie.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Galerie
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Photos</a></li>
+                        <li><a class="dropdown-item" href="#">Vidéos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Temoignages</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">A propos de moi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="d-none d-lg-block">
+                <a href="#"><i class="fab fa-facebook-f text-light me-3"></i></a>
+                <a href="#"><i class="fab fa-instagram text-light me-3"></i></a>
+                <a href="#"><i class="fab fa-youtube text-light"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Section FAQ -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Foire Aux Questions</h2>
+            <p class="section-subtitle text-center">Trouvez des réponses aux questions fréquemment posées. Si vous ne trouvez pas votre réponse ici, contactez-nous !</p>
+
+            <div class="accordion" id="faqAccordion">
+                <!-- Question 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Quels services offrez-vous en tant que DJ ?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Je propose des prestations DJ pour des événements variés : mariages, anniversaires, festivals, soirées d'entreprise, et bien plus encore. Mon objectif est de créer une ambiance musicale unique pour chaque occasion.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Comment puis-je réserver vos services ?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Vous pouvez me contacter via le formulaire de contact, par téléphone, ou par email. Une discussion préalable permettra d’établir un devis personnalisé selon vos besoins.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Fournissez-vous également le matériel nécessaire ?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Oui, je fournis tout l’équipement nécessaire : systèmes de sonorisation, éclairage, platines DJ, et micros. Chaque élément est ajusté selon les spécificités de l'événement.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Comment fonctionne votre politique d'annulation ?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            En cas d'annulation, il est recommandé de m'en informer au plus tôt. Des frais d'annulation peuvent s'appliquer selon les termes du contrat et la proximité de l'événement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-center py-5">
+        <div class="container">
+            <div class="footer-content">
+                <span class="text-light d-block mb-3">&copy; 2024 DJ Joseph</span>
+                <div class="social-icons mb-3">
+                    <a href="#"><i class="fab fa-facebook-f text-light me-3"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-light me-3"></i></a>
+                    <a href="#"><i class="fab fa-youtube text-light"></i></a>
+                </div>
+                <p class="text-muted">
+                    <a href="https://www.websnape.de" class="text-decoration-none" target="_blank" style="color: #ffb800;">
+                        Conçu par Websnape
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
