@@ -1,85 +1,864 @@
-/* Section Playlist */
-.playlist-section {
-    position: relative;
-    padding: 4rem 0;
-    background: url('https://images.squarespace-cdn.com/content/v1/5f6c2023d9baf06b88c6c0d4/1623890997705-P13930Y1SCG5MPMTOW0Q/unsplash-image-ZODcBkEohk8.jpg') no-repeat center center/cover; /* Remplace l'URL ici */
-    background-attachment: fixed; /* Fond fixe pour l'effet de parallaxe */
-    background-size: cover; /* Assurer que l'image couvre toute la section */
+/* Global Styling */
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.playlist-section::before {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-color: #000;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.logo {
+    width: 140px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    border-bottom: 2px solid #ffb800;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.navbar-brand {
+    color: #ffb800;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ffcc00;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 10px;
+}
+
+/* Divider style */
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Section Specialités Musicales */
+.specialties-section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    animation: fadeIn 1.5s ease both;
+}
+
+.specialties-section h2.section-title {
+    font-size: 3rem;
+    color: #ffb800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+.specialties-section h2.section-title::after {
     content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffb800;
+    margin: 1rem auto;
+}
+
+.specialties-section .specialty {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.specialties-section .specialty i {
+    font-size: 3.5rem;
+    color: #ffb800;
+    margin-bottom: 1rem;
+    animation: bounceIn 1.5s ease both;
+}
+
+.specialties-section .specialty h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.specialties-section .specialty p {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 0 1rem;
+    line-height: 1.7;
+}
+
+/* Video Section Styling */
+.video-section {
+    padding: 4rem 0;
+    background-color: #fff;
+    animation: fadeInRight 1.5s ease both;
+}
+
+.video-section h2.section-title {
+    font-size: 3rem;
+    color: #ffb800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.video-section .video-item {
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 1.5s ease both;
+}
+
+.video-section .video-item iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+}
+
+/* Shorts Section Styling */
+.shorts-section {
+    padding: 4rem 0;
+    background-color: #f1f1f1;
+    animation: fadeInLeft 1.5s ease both;
+}
+
+.shorts-section h2.section-title {
+    font-size: 3rem;
+    color: #ffb800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Playlist Section */
+.playlist-section {
+    padding: 4rem 0;
+    background-color: #333;
+    animation: fadeIn 1.5s ease both;
+}
+
+.playlist-section h2.section-title {
+    font-size: 3rem;
+    color: #ffb800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.playlist-section .playlist-item img {
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.playlist-section .playlist-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #000;
+    padding: 3rem 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footer .social-icons a {
+    color: #ffb800;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.footer-content p a {
+    color: #ffb800;
+    text-decoration: none;
+}
+
+.footer-content p a:hover {
+    color: #ffcc00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .specialties-section .specialty i {
+        font-size: 2.5rem;
+    }
+
+    .specialties-section .specialty h3 {
+        font-size: 1.5rem;
+    }
+
+    .specialties-section .specialty p {
+        font-size: 1rem;
+    }
+
+    .video-section, .shorts-section, .playlist-section, .specialties-section {
+        padding: 2rem 0;
+    }
+}
+
+/* Introduction Section with Video Background */
+.intro-section {
+    position: relative;
+    height: 100vh; /* Full-screen height */
+    overflow: hidden;
+}
+
+#introVideo {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Couche sombre pour améliorer la lisibilité */
+    object-fit: cover; /* Ensure video covers the entire section */
+    z-index: -1;
+   
+}
+
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay to enhance text contrast */
     z-index: 1;
 }
 
-.container {
-    position: relative;
-    z-index: 2; /* Assure que le contenu est au-dessus de l'image */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.intro-content {
+    z-index: 2;
+    max-width: 800px;
 }
 
-.section-title {
-    color: #ff5733;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-.playlist {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.track {
-    background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid #ff5733; /* Bordure orange à gauche */
-}
-
-.track:hover {
-    transform: translateY(-10px); /* Légère élévation au survol */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au hover */
-}
-
-.track h3 {
-    font-size: 1.6rem;
-    color: #333;
+.intro-content h1 {
+    font-size: 3.5rem;
+    color: #ffb800; /* Gold color for the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
     margin-bottom: 1rem;
+    animation: fadeInDown 1.5s ease both;
 }
 
-audio {
-    width: 100%;
-    height: 40px;
-    outline: none;
-    border-radius: 5px;
+.intro-content p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease both;
 }
 
+/* Keyframes for text animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .playlist-section {
-        padding: 2rem 0;
+    .intro-content h1 {
+        font-size: 2.5rem;
     }
 
-    .section-title {
+    .intro-content p {
+        font-size: 1.2rem;
+    }
+}
+/* Intro Overlay Styling with borders and dark background */
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 1;
+}
+
+.intro-content {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    padding: 3rem 2rem;
+    border: 3px solid #ffb800; /* Gold border */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    max-width: 800px;
+    text-align: center;
+    z-index: 2;
+}
+
+.intro-content h1 {
+    font-size: 3.5rem;
+    color: #ffb800; /* Gold color for the heading */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9); /* Strong text shadow for better readability */
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.5s ease both;
+    border-bottom: 2px solid #ffb800; /* Gold border below the title */
+    padding-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow for better contrast */
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease both;
+}
+
+/* Keyframes for text animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive adjustments for tablets and small devices */
+@media (max-width: 768px) {
+    .intro-section {
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    .intro-content {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #introVideo {
+        filter: brightness(0.4); /* Darken video more on smaller screens */
+    }
+}
+
+/* Responsive adjustments for very small devices (mobile phones) */
+@media (max-width: 576px) {
+    .intro-section {
+        height: 70vh; /* Adjust further for very small screens */
+    }
+
+    .intro-content {
+        padding: 1.5rem 1rem;
+        max-width: 95%;
+    }
+
+    .intro-content h1 {
         font-size: 2rem;
+        border-bottom: 1px solid #ffb800;
+        padding-bottom: 5px;
     }
 
-    .track h3 {
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    #introVideo {
+        filter: brightness(0.3); /* Further darken video for even smaller screens */
+    }
+}
+
+/* For medium-large screens (desktops and larger tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .intro-section {
+        height: 90vh; /* Full height for larger tablets */
+    }
+
+    .intro-content {
+        padding: 2.5rem 2rem;
+        max-width: 85%;
+    }
+
+    .intro-content h1 {
+        font-size: 3rem;
+    }
+
+    .intro-content p {
         font-size: 1.4rem;
     }
 }
+
+/* For large desktop screens */
+@media (min-width: 1200px) {
+    .intro-section {
+        height: 100vh;
+    }
+
+    .intro-content {
+        padding: 3rem 2.5rem;
+        max-width: 800px;
+    }
+
+    .intro-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1.5rem;
+    }
+}
+
+/* General Responsive Styling for small devices */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    /* Specialties Section */
+    .specialties-section {
+        padding: 2rem 0;
+    }
+
+    .specialties-section h2.section-title {
+        font-size: 2.5rem;
+    }
+
+    .specialties-section .specialty i {
+        font-size: 2.5rem;
+    }
+
+    .specialties-section .specialty h3 {
+        font-size: 1.5rem;
+    }
+
+    .specialties-section .specialty p {
+        font-size: 1rem;
+    }
+
+    /* Video Section */
+    .video-section, .shorts-section, .playlist-section {
+        padding: 2rem 0;
+    }
+
+    .video-section h2.section-title,
+    .shorts-section h2.section-title,
+    .playlist-section h2.section-title {
+        font-size: 2.5rem;
+    }
+
+    .video-section .video-item iframe {
+        height: 240px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
+}
+
+/* Adjustments for very small devices (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Navbar adjustments */
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Specialties Section */
+    .specialties-section h2.section-title {
+        font-size: 2rem;
+    }
+
+    .specialties-section .specialty i {
+        font-size: 2rem;
+    }
+
+    .specialties-section .specialty h3 {
+        font-size: 1.3rem;
+    }
+
+    .specialties-section .specialty p {
+        font-size: 0.9rem;
+    }
+
+    /* Video Section */
+    .video-section h2.section-title,
+    .shorts-section h2.section-title,
+    .playlist-section h2.section-title {
+        font-size: 2rem;
+    }
+
+    .video-section .video-item iframe {
+        height: 200px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+}
+
+/* Adjustments for medium-large screens (tablets and small desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Specialties Section */
+    .specialties-section h2.section-title {
+        font-size: 2.8rem;
+    }
+
+    .specialties-section .specialty i {
+        font-size: 3rem;
+    }
+
+    .specialties-section .specialty h3 {
+        font-size: 1.6rem;
+    }
+
+    /* Video Section */
+    .video-section h2.section-title,
+    .shorts-section h2.section-title,
+    .playlist-section h2.section-title {
+        font-size: 2.8rem;
+    }
+
+    .video-section .video-item iframe {
+        height: 280px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.4rem;
+    }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+    /* Specialties Section */
+    .specialties-section h2.section-title {
+        font-size: 3rem;
+    }
+
+    .specialties-section .specialty i {
+        font-size: 3.5rem;
+    }
+
+    .specialties-section .specialty h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Video Section */
+    .video-section h2.section-title,
+    .shorts-section h2.section-title,
+    .playlist-section h2.section-title {
+        font-size: 3rem;
+    }
+
+    .video-section .video-item iframe {
+        height: 315px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 4rem 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 15px;
+    }
+}
+
+/* Adjustments for the intro video background section */
+@media (max-width: 768px) {
+    .intro-section {
+        height: 80vh;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1.2rem;
+    }
+
+    #introVideo {
+        filter: brightness(0.4);
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-section {
+        height: 70vh;
+    }
+
+    .intro-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .intro-content h1 {
+        font-size: 2rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    #introVideo {
+        filter: brightness(0.3);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .intro-section {
+        height: 90vh;
+    }
+
+    .intro-content h1 {
+        font-size: 3rem;
+    }
+
+    .intro-content p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .intro-section {
+        height: 100vh;
+    }
+
+    .intro-content {
+        padding: 3rem 2.5rem;
+    }
+
+    .intro-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .intro-content p {
+        font-size: 1.5rem;
+    }
+}
+/* Default styling for video grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 videos per row on larger screens */
+    gap: 20px;
+}
+
+/* Iframe styling */
+.video-grid iframe {
+    width: 100%;
+    height: 215px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 videos per row on tablets/small screens */
+    }
+}
+
+/* Media query for very small screens (less than 576px) */
+@media (max-width: 576px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 1 video per row on small mobile screens */
+    }
+}
+
+
+
