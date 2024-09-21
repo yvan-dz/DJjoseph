@@ -410,3 +410,177 @@ header {
         font-size: 2.2rem;
     }
 }
+
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+
+    /* Body */
+    section {
+        padding: 0 1rem;
+    }
+
+    /* Header - Toujours pleine largeur */
+    header {
+        padding: 1.5rem 0;
+        width: 100%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    /* Navbar - Toujours pleine largeur */
+    .navbar {
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 4rem 1rem;
+    }
+
+    .contact-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    .contact-section .section-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+        padding: 4rem 1rem;
+    }
+
+    .pricing-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    .pricing-section .section-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .pricing-section .pricing-description {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+
+    .pricing-section .btn-gold {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    /* Footer - Toujours pleine largeur */
+    .footer {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Header */
+    header {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    /* Navbar - Toujours pleine largeur */
+    .navbar {
+        width: 100%;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 3rem 1rem;
+    }
+
+    .contact-section .section-title {
+        font-size: 2rem;
+    }
+
+    .contact-section .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+        padding: 3rem 1rem;
+    }
+
+    .pricing-section .section-title {
+        font-size: 2rem;
+    }
+
+    .pricing-section .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .pricing-section .pricing-description {
+        font-size: 1.1rem;
+        padding: 1.2rem;
+    }
+
+    .pricing-section .btn-gold {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Footer - Toujours pleine largeur */
+    .footer {
+        width: 100%;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .footer .social-icons a {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+    }
+}

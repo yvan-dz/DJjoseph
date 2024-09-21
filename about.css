@@ -284,3 +284,160 @@ header {
         font-size: 2.5rem;
     }
 }
+
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+
+   
+
+    /* Header Styling */
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    /* Navbar - Toujours pleine largeur */
+    .navbar {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        box-shadow: none; /* Suppression de l'ombre pour un look plus propre sur mobile */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    /* Section Galerie Intro */
+    .gallery-intro {
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* Images et vidéos */
+    .img-fluid {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 3rem 1rem;
+    }
+
+    .testimonial-item {
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+
+    .testimonial-item p {
+        font-size: 1rem;
+    }
+
+    .testimonial-item h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Footer - Toujours pleine largeur */
+    .footer {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    /* Header */
+    header {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    /* Navbar - Toujours pleine largeur */
+    .navbar {
+        padding: 0.3rem 0.5rem;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Section Galerie Intro */
+    .gallery-intro {
+        padding: 2.5rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Images et vidéos */
+    .img-fluid {
+        width: 100%;
+        margin-bottom: 0.8rem;
+        border-radius: 8px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .testimonial-item {
+        padding: 1rem;
+    }
+
+    /* Footer - Toujours pleine largeur */
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer .social-icons a {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+}
